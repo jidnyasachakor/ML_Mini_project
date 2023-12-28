@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Alexa Review Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazon Alexa Review Result</h1>
+    <p><b>Sentiment:</b> {{ review }}</p>
+    {% if review == 'positive' %}
+        <p>We are happy you liked our product😃</p> <!-- Emoji for positive sentiment -->
+    {% elif review == 'negative' %}
+        <p>We're sorry to hear you didn't like our product.Thankyou for your valuable review. We will surely improve our product.😞</p> <!-- Emoji for negative sentiment -->
+    {% else %}
+        <p>Your feedback is appreciated.We will surely improve our product😐</p> <!-- Emoji for neutral sentiment -->
+    {% endif %}
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+    </style>
+</body>
+</html>
